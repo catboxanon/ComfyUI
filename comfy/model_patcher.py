@@ -17,7 +17,7 @@
 """
 
 from __future__ import annotations
-from typing import Optional, Callable
+from typing import Optional, Callable, TYPE_CHECKING
 import torch
 import copy
 import inspect
@@ -33,7 +33,9 @@ import comfy.lora
 import comfy.hooks
 import comfy.patcher_extension
 from comfy.patcher_extension import CallbacksMP, WrappersMP, PatcherInjection
-from comfy.comfy_types import UnetWrapperFunction
+
+if TYPE_CHECKING:
+    from comfy.comfy_types import UnetWrapperFunction
 
 def string_to_seed(data):
     crc = 0xFFFFFFFF

@@ -1,10 +1,12 @@
 import itertools
-from typing import Sequence, Mapping, Dict
-from comfy_execution.graph import DynamicPrompt
+from typing import Sequence, Mapping, Dict, TYPE_CHECKING
 
 import nodes
 
 from comfy_execution.graph_utils import is_link
+
+if TYPE_CHECKING:
+    from comfy_execution.graph import DynamicPrompt
 
 NODE_CLASS_CONTAINS_UNIQUE_ID: Dict[str, bool] = {}
 

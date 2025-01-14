@@ -4,8 +4,10 @@ import os
 import time
 import mimetypes
 import logging
-from typing import Literal
-from collections.abc import Collection
+from typing import Literal, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from collections.abc import Collection
 
 supported_pt_extensions: set[str] = {'.ckpt', '.pt', '.bin', '.pth', '.safetensors', '.pkl', '.sft'}
 

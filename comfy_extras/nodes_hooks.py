@@ -1,10 +1,10 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING, Union
 import logging
-import torch
 from collections.abc import Iterable
 
 if TYPE_CHECKING:
+    import torch
     from comfy.sd import CLIP
 
 import comfy.hooks
